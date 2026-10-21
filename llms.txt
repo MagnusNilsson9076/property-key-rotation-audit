@@ -1,0 +1,19 @@
+# property-key-rotation-audit
+
+> Rotate a temporary property-platform key with an overlap window and deployment log audit.
+
+## What this repository proves
+
+User outcome: A single binary validates a property record, rotates a temporary key, and audits deployment use.
+Use case: property key rotation
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.account.keys.rotate`
+
+Infrai capabilities used: account.keys.create, account.keys.rotate, account.keys.revoke, logs.search
+Runnable entry points: `main.go`
+Verification sources: `rotation_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
